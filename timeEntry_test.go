@@ -22,10 +22,10 @@ func getTestTimeEntry() TimeEntry {
 		Pid:         123456789,
 		Description: "toggl test",
 		Billable:    false,
-		Start:       time.Date(2018, 4, 12, 7, 49, 0, 0, time.Local),
+		Start:       time.Date(2018, 4, 12, 7, 49, 0, 0, time.UTC),
 		Duration:    30,
 		Duronly:     false,
-		At:          time.Date(2018, 4, 12, 7, 49, 30, 0, time.Local),
+		At:          time.Date(2018, 4, 12, 7, 49, 30, 0, time.UTC),
 		UID:         2941647,
 		Tags: []string{
 			"fun",
@@ -132,7 +132,7 @@ func TestCreateTimeEntry(t *testing.T) {
 	})
 	api := New("test", OptionHTTPClient(client))
 
-	start := time.Date(2018, 4, 12, 7, 49, 0, 0, time.Local)
+	start := time.Date(2018, 4, 12, 7, 49, 0, 0, time.UTC)
 	timeEntry, err := api.CreateTimeEntry(context.Background(), 123456789, "toggl test", start, 30, []string{"fun"}, "golang")
 
 	if err != nil {
@@ -170,7 +170,7 @@ func TestUpdateTimeEntry(t *testing.T) {
 	})
 	api := New("test", OptionHTTPClient(client))
 
-	start := time.Date(2018, 4, 12, 7, 49, 0, 0, time.Local)
+	start := time.Date(2018, 4, 12, 7, 49, 0, 0, time.UTC)
 	timeEntry, err := api.UpdateTimeEntry(context.Background(), 1111111111, 123456789, "toggl test", start, 30, []string{"fun"}, "golang")
 
 	if err != nil {
