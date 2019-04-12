@@ -101,6 +101,8 @@ func TestGetTimeEntry(t *testing.T) {
 		return
 	}
 	if !reflect.DeepEqual(expected, *timeEntry) {
+		fmt.Println(expected)
+		fmt.Println(*timeEntry)
 		t.Fatal(errors.New("Response is incorrect"))
 	}
 
