@@ -102,7 +102,9 @@ func TestGetTimeEntry(t *testing.T) {
 	}
 	if !reflect.DeepEqual(expected, *timeEntry) {
 		fmt.Println(expected)
+		fmt.Printf("val:%#v type:%T\n", expected.Wid, expected.Wid)
 		fmt.Println(*timeEntry)
+		fmt.Printf("val:%#v type:%T\n", (*timeEntry).Wid, (*timeEntry).Wid)
 		t.Fatal(errors.New("Response is incorrect"))
 	}
 
