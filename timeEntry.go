@@ -24,7 +24,6 @@ type TimeEntry struct {
 	At          time.Time `json:"at"`
 	UID         int       `json:"uid"`
 	Tags        []string  `json:"tags"`
-	Project     Project
 }
 
 // TimeEntryRequest is used to create time entry
