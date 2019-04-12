@@ -1,5 +1,7 @@
 # Toggl API in Go
 
+[![Build Status](https://travis-ci.com/otms61/toggl.svg?branch=master)](https://travis-ci.com/otms61/toggl)
+
 This library partially supports the `Toggl API v8` REST calls.
 
 ## Installing
