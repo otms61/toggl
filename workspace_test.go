@@ -26,7 +26,7 @@ func getTestWorkspace() Workspace {
 		OnlyAdminsSeeBillableRates:  false,
 		Rounding:                    1,
 		RoundingMinutes:             0,
-		At:                          time.Date(2018, 4, 12, 7, 49, 15, 0, time.Local),
+		At:                          time.Date(2018, 4, 12, 7, 49, 15, 0, time.UTC),
 		LogoURL:                     "",
 	}
 }
@@ -42,7 +42,7 @@ func getTestWorkspaceUser() WorkspaceUser {
 		Email:          "test@a.a",
 		Timezone:       "Asia/Tokyo",
 		Inactive:       false,
-		At:             time.Date(2018, 4, 12, 7, 49, 0, 0, time.Local),
+		At:             time.Date(2018, 4, 12, 7, 49, 0, 0, time.UTC),
 		Name:           "saso",
 		GroupIds:       []int{},
 		Rate:           0,
